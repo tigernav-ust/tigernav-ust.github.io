@@ -36,9 +36,9 @@
     }
     a { color: var(--brand); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    
+
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
-    
+
     header {
       position: sticky; top: 0; z-index: 40; backdrop-filter: blur(10px);
       background: linear-gradient(to bottom, rgba(250,250,248,.95), rgba(250,250,248,.8) 60%, rgba(250,250,248,0));
@@ -48,7 +48,7 @@
     .logo { font-weight: 800; letter-spacing:.03em; }
     .nav a.btn-sm { padding:8px 14px; border-radius: 999px; border:1px solid var(--border); background: var(--panel); color: var(--ink); text-decoration:none; }
     .nav a.btn-sm:hover { border-color: var(--brand); background: var(--chip); }
-    
+
     .hero { padding: 56px 0 28px; }
     .pretitle { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius: 999px; background: var(--chip); color: var(--muted); font-weight:600; font-size: 12px; letter-spacing:.08em; text-transform:uppercase; }
     h1 { margin: 14px 0 12px; font-size: clamp(28px, 4.2vw, 56px); line-height:1.05; letter-spacing:.01em; }
@@ -59,18 +59,26 @@
     .authors a:hover { text-decoration: underline; }
     .affil { color: var(--muted); font-size: 15px; }
     .cta-row { margin: 20px 0 0; display:flex; flex-wrap:wrap; gap:12px; }
-    .btn { display:inline-flex; align-items:center; gap:10px; font-weight:700; padding: 12px 18px; border-radius: 12px; border: 1px solid var(--border); text-decoration:none; transition: transform .05s ease; box-shadow: var(--shadow); }
+
+    .btn {
+      display:inline-flex; align-items:center; gap:10px;
+      font-weight:700; padding: 12px 18px; border-radius: 12px;
+      border: 1px solid var(--border); text-decoration:none;
+      transition: transform .05s ease; box-shadow: var(--shadow);
+    }
     .btn:hover { transform: translateY(-1px); text-decoration: none; }
     .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#ffffff; border-color: transparent; }
     .btn.ghost { background: var(--panel); color: var(--ink); border-color: var(--border); }
     .btn.ghost:hover { background: var(--chip); border-color: var(--brand); }
+
+    /* Keep for future placeholders only */
     .btn.disabled { opacity:.55; cursor:not-allowed; pointer-events:none; }
-    
+
     section.card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 32px; margin: 26px 0; box-shadow: var(--shadow); }
     section.card h2 { margin: 0 0 16px; font-size: clamp(22px, 2.8vw, 32px); color: #d97706; font-weight: 700; }
     section.card h3 { margin: 20px 0 8px; font-size: clamp(18px, 2vw, 22px); color: var(--ink); }
     section.card p { margin: 12px 0; color: var(--muted); line-height: 1.7; text-align: justify; }
-    
+
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -88,27 +96,27 @@
       height: 100%;
       border: 0;
     }
-    
+
     img { max-width: 100%; height: auto; border-radius: var(--radius-lg); margin: 20px 0; border: 1px solid var(--border); }
-    
+
     /* Compact styling for UI section */
     .ui-section img { margin: 10px 0 24px 0; }
     .ui-section h3 { margin: 16px 0 6px; }
     .ui-section p { margin: 6px 0 8px; }
-    
-    .codebox { 
-      background: #faf7f4; 
-      border-radius: var(--radius-md); 
-      border:1px solid var(--border); 
-      padding: 20px; 
-      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; 
-      font-size: 13px; 
-      color: #3a2515; 
+
+    .codebox {
+      background: #faf7f4;
+      border-radius: var(--radius-md);
+      border:1px solid var(--border);
+      padding: 20px;
+      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
+      color: #3a2515;
       overflow: auto;
       white-space: pre;
       line-height: 1.6;
     }
-    
+
     .note {
       background: rgba(232, 155, 77, 0.08);
       border-left: 3px solid var(--brand);
@@ -118,9 +126,9 @@
       font-size: 14px;
       color: var(--muted);
     }
-    
+
     footer { color: var(--muted); font-size: 13px; padding: 40px 0; text-align:center; border-top: 1px solid var(--border); margin-top: 60px; }
-    
+
     @media (max-width: 768px) {
       .nav { flex-direction: column; align-items: flex-start; }
       .hero { padding: 32px 0 20px; }
@@ -141,13 +149,14 @@
       </nav>
     </div>
   </header>
-  
+
   <main class="wrap">
     <!-- Hero -->
     <div class="hero">
       <span class="pretitle">Accepted in <a href="https://ieeemy.org/tencon2025/" target="_blank" rel="noopener">IEEE TENCON 2025</a></span>
       <h1>TigerNav: Development of a Virtual Assistant using an Autoregressive Model for Indoor Navigation</h1>
       <p class="subtitle">A dialogue-based indoor navigation system using a Large Language Model to process diverse user inputs and provide accurate directional guidance through voice and text interaction.</p>
+
       <div class="authors">
         <span>Ralph Alexander N. San Juan</span>
         <span>•</span>
@@ -161,20 +170,34 @@
         <span>•</span>
         <a href="https://www.ust.edu.ph/profile/pangaliman-ma-madecheen-s/" target="_blank" rel="noopener">Ma. Madecheen S. Pangaliman</a>
       </div>
+
       <div class="affil">Department of Electronics Engineering, Faculty of Engineering, University of Santo Tomas</div>
+
+      <!-- ENABLED BUTTONS -->
       <div class="cta-row">
-        <a class="btn primary disabled" href="#" title="Paper coming soon" aria-disabled="true" role="button">📄 Paper (Coming Soon)</a>
-        <a class="btn ghost disabled" href="#" title="Code coming soon" aria-disabled="true" role="button">💻 Code (Coming Soon)</a>
+        <a class="btn primary" href="https://ieeexplore.ieee.org/document/11374916" target="_blank" rel="noopener">📄 Paper</a>
+
+        <a class="btn ghost"
+           href="https://github.com/tigernav-ust/tigernav-ust.github.io/tree/main/docs/codes"
+           target="_blank"
+           rel="noopener"
+           title="View code">
+          💻 Code
+        </a>
+
         <a class="btn ghost" href="#bibtex">📋 BibTeX</a>
       </div>
     </div>
+
     <!-- Abstract -->
     <section id="abstract" class="card">
       <h2>📄 Abstract</h2>
       <p>
-        We present TigerNav, a dialogue-based indoor navigation assistant that uses Large Language Models to provide interactive and speech-enabled directional guidance. Addressing challenges users faced with navigating complex indoor environments using conventional navigation systems, TigerNav integrates Whisper speech-to-text and Coqui text-to-speech technologies with a fine-tuned GPT-2 model, enabling natural voice-based and text-based interaction for indoor navigation. Deployed specifically for the Fr. Roque Ruaño Building at the University of Santo Tomas Engineering campus, the system was trained on a custom dataset designed to handle real-world navigation scenarios with both formal and informal user queries. The system supports both voice and text modalities for flexible interaction. We conclude with performance benchmarks, user satisfaction analysis, and recommendations for future enhancements. The source code can be accessed via <a href="https://github.com/tigernav-ust/tigernav" target="_blank" rel="noopener">https://github.com/tigernav-ust/tigernav</a>.
+        We present TigerNav, a dialogue-based indoor navigation assistant that uses Large Language Models to provide interactive and speech-enabled directional guidance. Addressing challenges users faced with navigating complex indoor environments using conventional navigation systems, TigerNav integrates Whisper speech-to-text and Coqui text-to-speech technologies with a fine-tuned GPT-2 model, enabling natural voice-based and text-based interaction for indoor navigation. Deployed specifically for the Fr. Roque Ruaño Building at the University of Santo Tomas Engineering campus, the system was trained on a custom dataset designed to handle real-world navigation scenarios with both formal and informal user queries. The system supports both voice and text modalities for flexible interaction. We conclude with performance benchmarks, user satisfaction analysis, and recommendations for future enhancements. The source code can be accessed via
+        <a href="https://github.com/tigernav-ust/tigernav-ust.github.io/tree/main/docs/codes" target="_blank" rel="noopener">https://github.com/tigernav-ust/tigernav-ust.github.io/tree/main/docs/codes</a>.
       </p>
     </section>
+
     <!-- Teaser Video -->
     <section id="teaser" class="card">
       <h2>🎥 Teaser Video</h2>
@@ -182,43 +205,46 @@
         <iframe src="https://www.youtube.com/embed/kq6zKs2pO14" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
+
     <!-- System Overview -->
     <section id="overview" class="card">
       <h2>🗺️ System Overview</h2>
       <p>
-        TigerNav employs a three-component pipeline: users speak navigation queries through <strong>Whisper STT</strong>, 
-        the fine-tuned <strong>GPT-2 model</strong> processes the request and generates directional instructions, 
+        TigerNav employs a three-component pipeline: users speak navigation queries through <strong>Whisper STT</strong>,
+        the fine-tuned <strong>GPT-2 model</strong> processes the request and generates directional instructions,
         and <strong>Coqui TTS</strong> delivers the response through natural speech output.
       </p>
       <div style="text-align: center;">
         <img src="architecture.png" alt="TigerNav System Architecture" style="max-width: 100%;">
       </div>
     </section>
+
     <!-- User Interface -->
     <section class="card ui-section">
       <h2>💻 User Interface</h2>
       <p>TigerNav offers two interaction modes for flexible navigation assistance:</p>
-      
+
       <h3>🎤 Voice-Enabled Virtual Assistant</h3>
       <p>Users can speak naturally to TigerNav and receive voice-guided navigation instructions, enabling hands-free operation ideal for walking through buildings.</p>
       <div style="text-align: center;">
         <img src="gui-voice.png" alt="Voice Interface Screenshot">
       </div>
-      
+
       <h3>💬 Text-Based Chatbot</h3>
       <p>For quieter environments or user preference, TigerNav also provides a text-based chat interface with the same navigation capabilities.</p>
       <div style="text-align: center;">
         <img src="gui-chat.png" alt="Chat Interface Screenshot">
       </div>
     </section>
+
     <!-- Results -->
     <section id="results" class="card">
       <h2>📊 Results</h2>
       <p>
-        The evaluation compared different training methods across five epochs, measuring performance through 
+        The evaluation compared different training methods across five epochs, measuring performance through
         multiple metrics. The General Purpose Trainer consistently outperformed ORPO across all metrics.
       </p>
-      
+
       <h3>📈 Performance Metrics Comparison</h3>
       <div style="overflow-x: auto; margin: 20px 0;">
         <table style="width: 100%; min-width: 600px;">
@@ -311,26 +337,28 @@
         </table>
       </div>
     </section>
+
     <!-- BibTeX -->
     <section id="bibtex" class="card">
       <h2>📝 BibTeX</h2>
       <p>If you find TigerNav useful in your research, please consider citing:</p>
       <div class="codebox">@inproceedings{sanjuan2025tigernav,
-  title     = {TigerNav: Development of a Virtual Assistant using an 
-               Autoregressive Model for Indoor Navigation},
-  author    = {San Juan, Ralph Alexander N. and 
-               Baetiong, Ernest John Q. and 
-               Bantayao, Saranggani J., Jr. and 
-               Mangali, Marc Justin M. and 
-               Sumo, Carl Kristien P. and 
+  title     = {TigerNav: Development of a Virtual Assistant using an Autoregressive Model for Indoor Navigation},
+  author    = {San Juan, Ralph Alexander N. and
+               Baetiong, Ernest John Q. and
+               Bantayao, Saranggani J., Jr. and
+               Mangali, Marc Justin M. and
+               Sumo, Carl Kristien P. and
                Pangaliman, Ma. Madecheen S.},
   booktitle = {2025 IEEE Region 10 Conference (TENCON)},
   year      = {2025},
   month     = {October},
   address   = {Kota Kinabalu, Sabah, Malaysia},
-  note      = {Accepted}
+  doi       = {10.1109/TENCON66050.2025.11374916},
+  url       = {https://ieeexplore.ieee.org/document/11374916}
 }</div>
     </section>
+
     <!-- Acknowledgment -->
     <section class="card">
       <h2>🙏 Acknowledgment</h2>
@@ -338,13 +366,14 @@
         The researchers would like to acknowledge the UST Faculty of Engineering, the UST Electronics Engineering Department, and the UST Senior High School Department for their support and guidance throughout the conduct of this study.
       </p>
     </section>
+
     <footer>
       © <span id="yr"></span> TigerNav Team • University of Santo Tomas, Manila, Philippines
       <br>
       <span style="font-size: 11px; opacity: .7;">Accepted at IEEE TENCON 2025 • October 27-30, 2025 • Kota Kinabalu, Sabah, Malaysia</span>
     </footer>
   </main>
-  
+
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
