@@ -18,7 +18,6 @@
   💻 <a href="https://github.com/tigernav-ust/tigernav-ust.github.io"><strong>Code</strong></a>
 </p>
 
-<hr/>
 
 ---
 
