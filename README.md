@@ -163,15 +163,6 @@ If you use TigerNav in your research, please cite:
 
 ---
 
-## 🎓 Affiliation
-
-Department of Electronics Engineering  
-Faculty of Engineering  
-University of Santo Tomas  
-Manila, Philippines  
-
----
-
 <p align="center">
   © 2025 TigerNav Research Team • University of Santo Tomas
 </p>
