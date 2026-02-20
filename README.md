@@ -41,9 +41,6 @@ TigerNav is a dialogue-based indoor navigation virtual assistant designed to pro
   <img src="docs/architecture.png" alt="TigerNav System Architecture" width="900">
 </p>
 
-> If your images are stored directly under `/docs/`, keep the path as `docs/filename.png`.
-> If they are in another folder (e.g., `assets/`), just update the paths above.
-
 ---
 
 ## 💻 User Interface
@@ -70,3 +67,111 @@ For full quantitative results and experimental setup, please refer to the publis
 ---
 
 ## 📁 Repository Structure
+
+```
+tigernav-ust.github.io/
+│
+├── docs/                       # GitHub Pages website files
+│   ├── index.html
+│   ├── architecture.png
+│   ├── gui-voice.png
+│   ├── gui-chat.png
+│   └── ...
+│
+├── docs/codes/                 # Sanitized training & evaluation scripts
+│   ├── finetuning_trainer.py
+│   ├── finetuning_orpo.py
+│   ├── evalualte_model.py
+│   └── ...
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/tigernav-ust/tigernav-ust.github.io.git
+cd tigernav-ust.github.io
+```
+
+Create a virtual environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate        # macOS/Linux
+.venv\Scripts\activate           # Windows
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🔬 Reproducibility
+
+> ⚠️ Dataset files are not included due to size and institutional constraints.
+
+### 1️⃣ Supervised Fine-Tuning (SFT)
+```bash
+python docs/codes/finetuning_trainer.py
+```
+
+### 2️⃣ Preference Optimization (ORPO)
+```bash
+python docs/codes/finetuning_orpo.py
+```
+
+### 3️⃣ Evaluation
+```bash
+python docs/codes/evalualte_model.py
+```
+
+### Recommended Environment
+- Python 3.10+
+- CUDA-enabled GPU (≥ 8GB VRAM recommended)
+- HuggingFace Transformers ecosystem
+
+---
+
+## 🧾 Citation
+
+If you use TigerNav in your research, please cite:
+
+```bibtex
+@inproceedings{sanjuan2025tigernav,
+  title     = {TigerNav: Development of a Virtual Assistant Using an Autoregressive Model for Indoor Navigation},
+  author    = {San Juan, Ralph Alexander N. and
+               Baetiong, Ernest John Q. and
+               Bantayao, Saranggani J., Jr. and
+               Mangali, Marc Justin M. and
+               Sumo, Carl Kristien P. and
+               Pangaliman, Ma. Madecheen S.},
+  booktitle = {2025 IEEE Region 10 Conference (TENCON)},
+  year      = {2025},
+  doi       = {10.1109/TENCON66050.2025.11374916},
+  url       = {https://ieeexplore.ieee.org/document/11374916}
+}
+```
+
+---
+
+## 🎓 Affiliation
+
+Department of Electronics Engineering  
+Faculty of Engineering  
+University of Santo Tomas  
+Manila, Philippines  
+
+---
+
+<p align="center">
+  © 2025 TigerNav Research Team • University of Santo Tomas
+</p>
