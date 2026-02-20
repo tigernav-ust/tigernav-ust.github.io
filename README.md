@@ -1,71 +1,75 @@
-# 🐯 TigerNav  
-### A Campus Navigation Chatbot with Integrated Large Language Model Capability  
+<h1 align="center">🐯 TigerNav</h1>
 
-[![IEEE TENCON 2025](https://img.shields.io/badge/IEEE%20TENCON-2025-blue)](https://ieeemy.org/tencon2025/)
-[![DOI](https://img.shields.io/badge/DOI-10.1109/TENCON66050.2025.11374916-green)](https://doi.org/10.1109/TENCON66050.2025.11374916)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<p align="center">
+  <em>TigerNav: Development of a Virtual Assistant Using an Autoregressive Model for Indoor Navigation</em>
+</p>
 
-🌐 **Project Page:** https://tigernav-ust.github.io/  
-📄 **Paper (IEEE Xplore):** https://doi.org/10.1109/TENCON66050.2025.11374916  
+<p align="center">
+  <img alt="TENCON 2025 Accepted" src="https://img.shields.io/badge/TENCON%202025-Accepted-2ea44f?style=flat">
+  <img alt="DOI 10.1109/TENCON66050.2025.11374916" src="https://img.shields.io/badge/DOI-10.1109%2FTENCON66050.2025.11374916-2563eb?style=flat">
+  <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-f59e0b?style=flat">
+</p>
 
----
+<p align="center">
+  📄 <a href="https://doi.org/10.1109/TENCON66050.2025.11374916"><strong>Paper</strong></a>
+  &nbsp;•&nbsp;
+  🌐 <a href="https://tigernav-ust.github.io/"><strong>Project Page</strong></a>
+  &nbsp;•&nbsp;
+  💻 <a href="https://github.com/tigernav-ust/tigernav-ust.github.io"><strong>Code</strong></a>
+</p>
 
-## 📌 Overview
-
-TigerNav is an intelligent campus navigation chatbot designed to assist students, faculty, and visitors in navigating the University of Santo Tomas campus.  
-
-The system integrates:
-
-- 🧠 Large Language Models (LLMs)
-- 📚 Fine-tuned domain-specific datasets
-- 📊 Preference optimization techniques (SFT, DPO, ORPO)
-- 💬 Conversational interface for natural interaction
-
-TigerNav provides contextualized campus directions, building information, and navigation assistance using an optimized instruction-tuned language model.
+<hr/>
 
 ---
 
-## 🏗️ System Architecture
+## 📄 Abstract
 
-TigerNav follows a structured pipeline:
+TigerNav is an intelligent campus navigation chatbot developed to assist students, faculty, and visitors in navigating university grounds through conversational interaction. The system integrates instruction-tuned Large Language Models (LLMs) fine-tuned on campus-specific navigation data.  
 
-1. 📥 User Query  
-2. 🔎 Query Processing  
-3. 🧠 LLM Inference (Fine-tuned Model)  
-4. 📤 Response Generation  
-
-Training strategies evaluated:
-- Supervised Fine-Tuning (SFT)
-- Direct Preference Optimization (DPO)
-- Odds Ratio Preference Optimization (ORPO)
+We evaluate multiple training paradigms including Supervised Fine-Tuning (SFT), Direct Preference Optimization (DPO), and Odds Ratio Preference Optimization (ORPO) to improve contextual accuracy and response alignment. Results demonstrate that preference-based optimization enhances semantic alignment and reduces perplexity compared to baseline fine-tuning methods.
 
 ---
 
-## 📊 Results Summary
+## 🗺️ System Overview
 
-The evaluation compared multiple training strategies using:
+TigerNav follows a structured conversational pipeline:
 
-- METEOR (semantic similarity)
-- BERTScore
-- Perplexity (model confidence)
+1. **User Query Input**
+2. **Intent & Context Processing**
+3. **Fine-Tuned LLM Inference**
+4. **Response Generation**
 
-ORPO demonstrated improved response alignment and confidence compared to baseline SFT.
+The model was trained on structured campus navigation data and optimized using preference learning techniques to improve real-world conversational performance.
 
-(See full quantitative results in the published paper.)
+---
+
+## 📊 Results
+
+Performance evaluation metrics include:
+
+- **METEOR** – Semantic alignment  
+- **BERTScore** – Contextual similarity  
+- **Perplexity** – Model confidence  
+
+Preference optimization (ORPO) showed improved alignment and lower perplexity relative to standard SFT.
+
+For complete experimental results, please refer to the published paper.
 
 ---
 
 ## 📁 Repository Structure
 
 ```
-tigernav/
+tigernav-ust.github.io/
 │
-├── codes/                     # Sanitized training and evaluation scripts
+├── docs/                     # GitHub Pages site
+├── codes/                    # Sanitized training & evaluation scripts
 │   ├── finetuning_trainer.py
 │   ├── finetuning_orpo.py
 │   ├── DPO_Format.py
 │   ├── DPO_dataset_metric.py
 │   ├── Cosine_Similarity.py
+│   ├── JSON_converter.py
 │   └── ...
 │
 ├── requirements.txt
@@ -101,40 +105,39 @@ pip install -r requirements.txt
 
 ## 🔬 Reproducibility
 
-To reproduce training and evaluation:
+To reproduce the training pipeline:
 
-1. Prepare dataset in required JSON / parquet format.
-2. Run supervised fine-tuning:
+### 1️⃣ Supervised Fine-Tuning
 
 ```bash
 python codes/finetuning_trainer.py
 ```
 
-3. Run preference optimization:
+### 2️⃣ Preference Optimization (ORPO)
 
 ```bash
 python codes/finetuning_orpo.py
 ```
 
-4. Evaluate trained model:
+### 3️⃣ Evaluation
 
 ```bash
 python codes/evalualte_model.py
 ```
 
-⚠️ Note:
-- Dataset files are not included due to size and institutional constraints.
-- Ensure GPU acceleration is available for training.
+### Environment Requirements
 
-Recommended environment:
 - Python 3.10+
-- CUDA-enabled GPU (≥8GB VRAM recommended)
+- CUDA-enabled GPU (recommended ≥8GB VRAM)
+- HuggingFace Transformers ecosystem
+
+⚠️ Note: Dataset files are not included due to size and institutional data constraints.
 
 ---
 
-## 📄 Citation
+## 📖 Citation
 
-If you find TigerNav useful in your research, please cite:
+If you use TigerNav in your research, please cite:
 
 ```bibtex
 @inproceedings{tigernav2025,
@@ -153,12 +156,6 @@ Department of Electronics Engineering
 Faculty of Engineering  
 University of Santo Tomas  
 Manila, Philippines  
-
----
-
-## 📜 License
-
-This project is released under the MIT License.
 
 ---
 
